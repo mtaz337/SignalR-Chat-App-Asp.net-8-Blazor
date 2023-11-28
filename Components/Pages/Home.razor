@@ -1,0 +1,115 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.SignalR.Client
+@inject NavigationManager Navigation
+@implements IAsyncDisposable
+<link href="styles.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<PageTitle>Home</PageTitle>
+<section class="get-in-touch">
+   <h1 class="title">Have a Conversation!</h1>
+   <div class="contact-form row">
+      <div class="form-field col-lg-12">
+         <input id="name" class="input-text js-input" type="text" @bind="userInput" required>
+         <label class="label" for="name">Name</label>
+      </div>
+     
+      <div class="form-field col-lg-12">
+         <input id="message" class="input-text js-input" type="text" @bind="messageInput" required>
+         <label class="label" for="message">Message</label>
+      </div>
+      <div class="form-field col-lg-12">
+         <button class='submit-btn' @onclick="Send" disabled="@(!IsConnected)">Send</button>
+      </div>
+   </div>
+</section>
+
+<hr>
+
+
+
+
+@foreach (var message in messages)
+{
+    string[] parts = message.Split('|').Select(part => part.Trim()).ToArray();
+
+    // Extract the values into variables
+    string name = parts.Length > 0 ? parts[0] : string.Empty;
+    string messageContent = parts.Length > 1 ? parts[1] : string.Empty;
+    string timestamp = parts.Length > 2 ? parts[2] : string.Empty;
+
+    <div class="card">
+    <!-- User Info and Timestamp -->
+    <div class="row" style="margin-top:-1.5rem; margin-bottom:1rem;">
+        <div class="col user-info">
+            <img class="user-img" src="user.png" alt="User Image">
+            <span class="user-name">@name</span>
+        </div>
+        <div class="col timestamp-info text-end">
+            <span class="timestamp">
+                <img class="clock-img" src="clock.png" alt="Clock Icon">
+                @timestamp
+            </span>
+        </div>
+    </div>
+
+    <!-- Post Content -->
+    <div class="post">
+        <span><img class="quote-img" src="quote.png" alt="Quote Icon"></span>
+        <span class="post-txt">@messageContent</span>
+        <span><img class="nice-img" src="left.png" alt="Nice Icon"></span>
+    </div>
+</div>
+}
+
+
+@code {
+    private HubConnection? hubConnection;
+    private List<string> messages = new List<string>();
+    private string? userInput;
+    private string? messageInput;
+
+    protected override async Task OnInitializedAsync()
+    {
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl(Navigation.ToAbsoluteUri("/chathub"))
+            .Build();
+
+        hubConnection.On<string, string>("ReceiveMessage", (user, message) =>
+        {
+            DateTime currentUtcDateTime = DateTime.UtcNow;
+            string formattedDateTime = currentUtcDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            var encodedMsg = $"{user} | {message} | {formattedDateTime}"; // Add spaces around pipes
+            messages.Add(encodedMsg);
+            InvokeAsync(StateHasChanged);
+        });
+
+
+
+        await hubConnection.StartAsync();
+    }
+
+    private async Task Send()
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.SendAsync("SendMessage", userInput, messageInput);
+        }
+    }
+
+    public bool IsConnected =>
+        hubConnection?.State == HubConnectionState.Connected;
+
+    public async ValueTask DisposeAsync()
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.DisposeAsync();
+        }
+    }
+}

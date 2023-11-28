@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\mtazwar3765\\Desktop\\Daily Notes\\BlazorSignalRApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorSignalRApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BlazorSignalRApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\mtazwar3765\\Desktop\\Daily Notes\\BlazorSignalRApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\mtazwar3765\\Desktop\\Daily Notes\\BlazorSignalRApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mtazwar3765\\Desktop\\Daily Notes\\BlazorSignalRApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mtazwar3765\\Desktop\\Daily Notes\\BlazorSignalRApp\\wwwroot\\clock.png",
+      "PackagePath": "staticwebassets\\clock.png"
+    },
+    {
+      "Id": "C:\\Users\\mtazwar3765\\Desktop\\Daily Notes\\BlazorSignalRApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\mtazwar3765\\Desktop\\Daily Notes\\BlazorSignalRApp\\wwwroot\\left.png",
+      "PackagePath": "staticwebassets\\left.png"
+    },
+    {
+      "Id": "C:\\Users\\mtazwar3765\\Desktop\\Daily Notes\\BlazorSignalRApp\\wwwroot\\quote.png",
+      "PackagePath": "staticwebassets\\quote.png"
+    },
+    {
+      "Id": "C:\\Users\\mtazwar3765\\Desktop\\Daily Notes\\BlazorSignalRApp\\wwwroot\\user.png",
+      "PackagePath": "staticwebassets\\user.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorSignalRApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BlazorSignalRApp.props",
+      "PackagePath": "build\\BlazorSignalRApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorSignalRApp.props",
+      "PackagePath": "buildMultiTargeting\\BlazorSignalRApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BlazorSignalRApp.props",
+      "PackagePath": "buildTransitive\\BlazorSignalRApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

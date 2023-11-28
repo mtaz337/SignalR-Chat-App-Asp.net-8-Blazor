@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "satCtC1d1zv+fgmO1YjVu3j0X4w2+dGu+roAWbPAUFTp2Cggt0h4V2b4AeZSvbjubuJtTWDq0WYKYRfX1ILAgg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mtazwar3765\\Desktop\\Daily Notes\\BlazorSignalRApp\\BlazorSignalRApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\8.0.0\\microsoft.aspnetcore.connections.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\8.0.0\\microsoft.aspnetcore.http.connections.client.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\8.0.0\\microsoft.aspnetcore.http.connections.common.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\8.0.0\\microsoft.aspnetcore.signalr.client.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\8.0.0\\microsoft.aspnetcore.signalr.client.core.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\8.0.0\\microsoft.aspnetcore.signalr.common.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\8.0.0\\microsoft.aspnetcore.signalr.protocols.json.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.extensions.features\\8.0.0\\microsoft.extensions.features.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtazwar3765\\.nuget\\packages\\system.threading.channels\\8.0.0\\system.threading.channels.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
